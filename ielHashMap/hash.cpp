@@ -6,7 +6,7 @@ void hash1::ajouterItem(string nom, string adresse, string tel){
     int index = Hash(nom);
     int nbitem;
     if (HashTable[index]->nom == "vide"){
-        HashTable[index]->non = nom;
+        HashTable[index]->nom = nom;
         HashTable[index]->adresse = adresse;
         HashTable[index]->tel = tel;
     }
