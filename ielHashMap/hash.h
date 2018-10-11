@@ -8,10 +8,21 @@ using namespace std;
 #define HASH_H_INCLUDED
 
 class hash1{
+    private:
+        static const int tailleTableau = 10;
 
+        struct item{
+            string nom;
+            string adresse;
+            string tel;
+            item* next;
+        };
+        item* HashTable[tailleTableau];
 
     public:
         int Hash(string cle);
+        hash1();
+        void ajouterItem(string nom, string adresse, string tel);
 
 };
 
