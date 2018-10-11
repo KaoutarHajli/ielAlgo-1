@@ -4,6 +4,26 @@
 
 using namespace std;
 
+void hash1::afficherItemsDansIndex(int index){
+    item* ptr = HashTable[index];
+    if (ptr->nom == "vide"){
+        cout << "index vide " << index << endl;
+    }
+    else {
+        cout << "--liste des items qui ont le meme index meme case du tableau--" << endl;
+        cout << "l index =  " << index << " Contient des items" ;
+        // on lit en profondeur le contenu d une case du tableau
+        while (ptr != NULL){
+            cout << "     ----------\n";
+            cout << ptr->nom << endl;
+            cout << ptr->adresse << endl;
+            cout << ptr->tel << endl;
+            cout << "     ----------\n";
+            ptr= ptr->next;
+        }
+    }
+}
+
 void hash1::afficherItems(){
     int compteurItem =0;
     for(int i=0; i < tailleTableau; i++){
@@ -63,9 +83,9 @@ return index;
     for(int i=0; i<tailleTableau; i++){
         HashTable[i]= new item;
 
-        HashTable[i]->nom = "empty";
-        HashTable[i]->adresse = "empty";
-        HashTable[i]->tel = "empty";
+        HashTable[i]->nom = "vide";
+        HashTable[i]->adresse = "vide";
+        HashTable[i]->tel = "vide";
         HashTable[i]->next = NULL;
     }
  }

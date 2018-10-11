@@ -20,6 +20,7 @@ int main(){
     //-----------------------------
 
     haT.afficherItems();
+    haT.afficherItemsDansIndex(8);
 
 
     return 0;

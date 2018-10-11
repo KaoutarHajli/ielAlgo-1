@@ -25,6 +25,7 @@ class hash1{
         int  ajouterItem(string nom, string adresse, string tel);
         int  nombreItems(int index); // nombre items dans tableau
         void afficherItems(); // afficher le contenu du tableau
+        void afficherItemsDansIndex(int index); // les items qui ont le même resultat de hashage et qui sont empilés
 
 };
 
