@@ -1,9 +1,11 @@
 #include <iostream>
+#include "hash.h"
 
 using namespace std;
 
-int main()
-{
-    cout << "Hello world!" << endl;
+int main(){
+    hash1 haT;
+    haT.Hash("iel");
+
     return 0;
 }
