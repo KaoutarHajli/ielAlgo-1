@@ -2,9 +2,25 @@
 #include <string>
 #include "hash.h"
 
+int hash1::nombreItems(int index){
+    int nbItem =0;
+    if (HashTable[index]->nom == "vide"){
+        return nbItem;
+    }
+    else {
+        nbItem ++;
+        item* ptr = HashTable[index];
+        while (ptr->next!=NULL){
+            nbItem ++;
+            ptr= ptr->next;
+        }
+    return nbItem;
+    }
+
+}
 void hash1::ajouterItem(string nom, string adresse, string tel){
     int index = Hash(nom);
-    int nbitem;
+    int nbitem = 0;
     if (HashTable[index]->nom == "vide"){
         HashTable[index]->nom = nom;
         HashTable[index]->adresse = adresse;

@@ -23,6 +23,7 @@ class hash1{
         int Hash(string cle);
         hash1();
         void ajouterItem(string nom, string adresse, string tel);
+        int  nombreItems(int index); // nombre items dans tableau
 
 };
 
